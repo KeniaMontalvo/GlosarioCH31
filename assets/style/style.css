@@ -7,6 +7,7 @@
 
 .logo img {
     width: 200px;
+    padding-left: 25px;
 }
 
 nav {
@@ -36,3 +37,31 @@ li a:hover{
 }
 
 /*main*/
+
+.contenedor-principal {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-around;
+}
+
+.imagen-contenedor-principal img {
+    width: 500px;
+    padding: 30px 0 50px 30px;
+}
+
+.texto-contenedor-principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.texto-contenedor-principal h1 {
+    padding-bottom: 30px;
+    font-size: 50px;
+    color: #0C356A;
+}
+
+.texto-contenedor-principal h1:hover{
+    color: #40F8FF;
+}
