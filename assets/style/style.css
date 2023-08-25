@@ -98,3 +98,39 @@ h2 {
 .opciones li {
     margin-top: 5px;
 }
+
+/*Información*/
+
+span {
+    font-weight: bold;
+}
+
+.glosario {
+    margin: 50px 20px 50px 30px;
+}
+
+.glosario h3 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.glosario p {
+    margin-bottom: 5px;
+}
+
+.glosario h4 {
+    margin-bottom: 10px;
+}
+
+.glosario ul li {
+    margin-bottom: 3px;
+}
+
+.glosario ol li {
+    margin-bottom: 3px;
+}
+
+.items li {
+    list-style:circle;
+    margin-top: 5px;
+}

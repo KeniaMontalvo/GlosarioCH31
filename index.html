@@ -92,14 +92,497 @@
     </div>
     
     <!--inicio de glosario-->
-    <h3 id="git">
-        Git
-    </h3>
-    <h3 id="github">
-        GitHub
-    </h3>
-    <h3 id="scrum">
-        Scrum
-    </h3>
+    <div class="glosario">
+        <h2 id="git">
+            Git
+        </h2>
+        <p>
+            Sistema de control de versiones distribuido que se basa en la idea de que cada desarrollador tiene su propia copia completa del repositorio, lo que permite un desarrollo descentralizado, un historial de cambios eficiente y la capacidad de fusionar cambios de diferentes ramas.
+        </p>
+        <br>
+        <p>
+            <span>
+                Resumen: 
+            </span>
+            Control de versiones, mostrar historial, rastrear/visualizar, alterar código.
+        </p>
+        <ul>
+            <li>
+                <span>
+                    Repositorio. 
+                </span>
+                Carpeta que deja de existir en local, que lo subo a un servidor para que todas las carpetas que sepan de su existencia, puedan hacer copias, son copias que viven directamente sobre el repositorio.
+            </li>
+        </ul>
+        <h4>
+            Lista de comandos
+        </h4>
+        <ul>
+            <li>
+                <span>
+                    pwd. 
+                </span>
+                print work directory. Nos ayuda a imprimir nuestro directorio completo activo.
+            </li>
+            <li>
+                <span>
+                    ls.
+                </span>
+                list directory contents. Nos muestra que hay dentro de lo que incluye la carpeta en la que estamos posicionados.
+            </li>
+            <li>
+                <span>
+                    ls -l
+                </span>
+                lista toda la información que encuentre, con un formato más largo.
+            </li>
+            <li>
+                <span>
+                    ls -alR
+                </span>
+                R significa recursivo. Podemos ver detalladamente los archivos de la carpeta en la que estamos posicionados.
+            </li>
+            <li>
+                <span>
+                    history
+                </span>
+                Revisar el historial de comandos utilizados.
+            </li>
+            <li>
+                <span>
+                    clear
+                </span>
+                Limpiar la información de la ventana.
+            </li>
+        </ul>
+        <h4>
+            Estructura general de un comando
+        </h4>
+        <p>
+            $ qué quiero hacer / cómo lo voy hacer / a quién lo voy hacer
+        </p>
+        <h4>
+            Comandos básicos para manejar directorios
+        </h4>
+        <ul>
+            <li>
+                <span>
+                    cd
+                </span>
+                (change directory). Para cambiar entre directorio y para salir de todo.
+            </li>
+            <li>
+                <span>
+                    cd + letra inicial de la carpeta + tab 
+                </span>
+                autocompleta.
+            </li>
+            <li>
+                <span>
+                    cd .. 
+                </span>
+                Regresa a un nivel anterior.
+            </li>
+            <li>
+                <span>
+                    cd nombreDelDirectorio 
+                </span>
+                para entrar a un directorio en un nivel siguiente. (cd /nombredeldirectorio/otrodirectorio/otrodirectorio)
+            </li>
+            <li>
+                <span>
+                    mkdir 
+                </span>
+                (make directory): Para crear directorios.
+            </li>
+            <li>
+                <span>
+                    rmdir 
+                </span>
+                (remove directory): Para eliminar directorios VACÍOS.
+            </li>
+            <li>
+                <span>
+                    cp 
+                </span>
+                (copy file): cp ArchivoACopiar.ext../ Para copiar archivos.
+            </li>
+            <li>
+                <span>
+                    mv 
+                </span>
+                (move file): Para mover archivos.
+            </li>
+            <li>
+                <span>
+                    rm 
+                </span>
+                (remove file): Para remover archivos.
+            </li>
+            <li>
+                <span>
+                    rm -r nombreDelArchivo 
+                </span>
+                Borra todo lo que encuentre (tanto la carpeta como los archivos dentro)
+            </li>
+            <li>
+                <span>
+                    touch + nombre con extensión: 
+                </span>
+                Creación de archivos
+            </li>
+        </ul>
+        <h4>
+            Para crear un documento en <span>nano</span>
+        </h4>
+        <ol>
+            <li>
+                Ejecutar nano ejemplo.txt
+            </li>
+            <li>
+                Escribe la información dentro del archivo.
+            </li>
+            <li>
+                Cuando estemos listos de guardar, mantén presionada la tecla Ctrl y presiona la letra O. Nos preguntará si queremos guardar el archivo.
+            </li>
+            <li>
+                Damos enter y se guarda.
+            </li>
+            <li>
+                Cuando terminemos, presionamos Ctrl + X para cerrar nano, y regresar a la terminal.
+            </li>
+        </ol>
+        <h2 id="github">
+            GitHub
+        </h2>
+        <p>
+            Plataforma para poder crear proyectos abiertos y que se va caracterizar principalmente por las funciones colaborativas.
+        </p>
+        <h4>
+            ¿Cuál es la diferencia entre Git y GitHub?
+        </h4>
+        <p>
+            Git es el sistema de control de versiones que permite realizar un seguimiento de los cambios en el código, mientras que GitHub es una plataforma en línea que utiliza Git para alojar, colaborar y administrar proyecos de desarrollo de software de manera colaborativa. 
+        </p>
+        <ul>
+            <li>
+                <span>
+                    git --version 
+                </span>
+                para saber qué versión de git tenemos intalada.
+            </li>
+            <li>
+                <span>
+                    git help 
+                </span>
+                para obtener ayuda en comandos git.
+            </li>
+            <li>
+                <span>
+                    git config --global user.name "NombreDeUsuario"
+                </span>
+            </li>
+            <li>
+                <span>
+                    git config --global user.email correoelectronico.com
+                </span>
+            </li>
+            <li>
+                <span>
+                    git config --list 
+                </span>
+                para validar los datos ingresados.
+            </li>
+            <li>
+                <span>
+                    git init 
+                </span>
+                para convertir mi carpeta local a repositorio.
+            </li>
+            <li>
+                <span>
+                    git status 
+                </span>
+                para revisar el estado de mi repositorio.
+            </li>
+            <li>
+                <span>
+                    git add . 
+                </span>
+                para agregar todos los archivos.
+            </li>
+            <li>
+                <span>
+                    git commit 
+                </span>
+                para agregar comentarios/para trabajar en vim, i=para agregar información, damos esc para salir y presionamos :wq para guardar y salir.
+            </li>
+            <li>
+                <span>
+                    git push 
+                </span>
+                subir los cambios al repositorio de GitHub.
+            </li>
+            <li>
+                <span>
+                    git remote add origin direccionDelRepositorio.git 
+                </span>
+            </li>
+            <li>
+                <span>
+                    git commit -m "mensaje" 
+                </span>
+                se agrega el comentario entre las comillas.
+            </li>
+            <li>
+                <span>
+                    git log 
+                </span>
+                para saber el historial de comentarios.
+            </li>
+        </ul>
+        <h2 id="scrum">
+            Scrum
+        </h2>
+        <p>
+            Es un marco de trabajo simple que promueve la colaboración en los equipos para lograr desarrollar productos complejos para satisfacer las necesidades de los clientes.
+        </p>
+        <h4>
+            Metodología tradicional.
+        </h4>
+        <p>
+            Planificación proactiva donde factores como el costo, alcance y el tiempo son importantes. Buscan imponer disciplina.
+        </p>
+        <h4>
+            Metodología waterfall.
+        </h4>
+        <p>
+            Requisitos (qué se necesita para el resultado final), diseño desarrollo, pruebas y lanzamiento. Desventajas: es imposible predecir cada detalle del producto, los dueños no tienen visibilidad del producto hasta su lanzamiento.
+        </p>
+        <h4>
+            Los 4 principios Agile.
+        </h4>
+        <ul>
+            <li>
+                Individuos e interacciones sobre procesos y herramientas.
+            </li>
+            <li>
+                Software funcionando sobre documentación extensiva.
+            </li>
+            <li>
+                Colaboración con el cliente sobre negociación contractual.
+            </li>
+            <li>
+                Responder al cambio sobre seguir un plan.
+            </li>
+        </ul>
+        <h4>
+            Desarrollo de Software Agile.
+        </h4>
+        <ul>
+            <li>
+                Enfoque a la mejora continua.
+            </li>
+            <li>
+                Software funcional.
+            </li>
+            <li>
+                Adaptabilidad en cambios.
+            </li>
+            <li>
+                Colaboración y transparencia con el cliente para que este pueda conocer su producto y dar retroalimentación del mismo.
+            </li>
+            <li>
+                Enfoque a los individuos e interacciones.
+            </li>
+        </ul>
+        <h3>
+            Roles de Scrum.
+        </h3>
+        
+        <h4>
+            Product Owner
+        </h4>
+        <ul>
+            <li>
+                Representa los requerimentos y necesidades del cliente.
+            </li>
+            <li>
+                Es el encargado de definir la visión y dirección del producto.
+            </li>
+            <li>
+                Es responsable de refinar el product backlog.
+            </li>
+            <li>
+                Busca maximizar el valor del producto, para el cliente, los usuarios y la organización.
+            </li>
+        </ul>
+        <h4>
+            Scrum Master
+        </h4>
+        <ul>
+            <li>
+                Se encarga de facilitar la ejecución del marco de Scrum.
+            </li>
+            <li>
+                Es un líder sirviente (es decir, que no da órdenes ni reparte tareas si no apoya y si sirve al equipo para que lleguen a su meta.)
+            </li>
+            <li>
+                Ayuda a eliminar impedimentos que puedan afectar la entrega del producto.
+            </li>
+            <li>
+                Facilita las ceremonias Scrum.
+            </li>
+            <li>
+                Analiza las métricas del burndown chart para buscar procesos de mejora.
+            </li>
+        </ul>
+        <h4>
+            Equipo de Desarrollo
+        </h4>
+        <p>
+            El equio de desarrollo es un equipo multifuncional. Es decir, lo integran desarrolladores, testers y tienen todas las habilidades técnicas necesarias para desarrollar el proyecto. 
+            <br>
+            Son colaborativos, es decir, ellos mismos organizan sus tareas.
+        </p>
+        <h4>
+            Stakeholders
+        </h4>
+            <p>
+                Son individuos, grupos o entidades que tienen un interés o están involucrados de alguna manera en el proyecto o en el resultado final del producto. Pueden tener influencia sobre el proyecto, ser afectados por él o tener algún tipo de relación con el mismo.
+                <br>
+                Pueden incluir:
+            </p>
+            <ul>
+                <li>
+                    Clientes y usuarios finales,
+                </li>
+                <li>
+                    patrocinadores,
+                </li>
+                <li>
+                    proveedores,
+                </li>
+                <li>
+                    reguladores.
+                </li>
+            </ul>
+            <h4>
+                Artefactos.
+            </h4>
+            <ul>
+                <li>
+                    <span>
+                        Product Backlog. 
+                    </span>
+                    Lista de necesidades, resultado del refinamiento.
+                </li>
+                <li>
+                    <span>
+                        Sprint Backlog. 
+                    </span>
+                    Plan de acción, resultado del Sprint Planning (primera reunión donde juntamos nuestras ideas.)
+                </li>
+                <li>
+                    <span>
+                        Increment. 
+                    </span>
+                    Suma al producto, resultado del Sprint.
+                </li>
+            </ul>
+            <h3>
+                Historias de usuario.
+            </h3>
+            <h4>Título de la Historia</h4>
+            <ul>
+                <li>
+                    <span>
+                        Cómo "role, persona". 
+                    </span>
+                    Persona o rol de usuario que tiene la necesidad.
+                </li>
+                <li>
+                    <span>
+                        Quiero "objetivo, comportamiento". 
+                    </span>
+                    Lo que se requiere obtener: una funcionalidad, característica, etc.
+                </li>
+                <li>
+                    <span>
+                        Para "motivo, razón, valor". 
+                    </span>
+                    Motivo por el que se necesita, valor que se obtiene como resultado, etc.
+                </li>
+            </ul>
+            <h3>
+                Rituales.
+            </h3>
+            <ol>
+                <li>
+                    <span>
+                        Planificación del Sprint (Sprint Planning)
+                    </span>
+                    <ul class="items">
+                        <li>
+                            El equipo Scrum, que incluye a los desarrolladores, el Scrum Master y el Product Owner, se reúne para planificar el trabajo que se realizará durante el próximo Sprint.
+                        </li>
+                        <li>
+                            El objetivo es definir qué elementos del Backlog del Producto (conjunto de requisitos y funcionalidad pendientes) se incluirán en el Sprint y cómo se implementarán.
+                        </li>
+                        <li>
+                            Al final de esta fase, el equipo debe tener una comprensión clara de lo que espera lograr en el Sprint y cómo medir el éxito.
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <span>
+                        Desarrollo del Sprint (Sprint Development)
+                    </span>
+                    <ul class="items">
+                        <li>
+                            Durante el Sprint, el equipo trabaja en la implementación de las funcionalidades seleccionadas.
+                        </li>
+                        <li>
+                            Las tareas se realizan en ciclos cortos y regulares llamados <span>"Daily Scrums"</span> o <span>"Daily Standups"</span>, en los cuales los miembros del equipo comparten actualizaciones sobre su progreso, desafíos y próximas tareas.
+                        </li>
+                        <li>
+                            El equipo trabaja de manera autónoma para lograr los objetivos del Sprint, manteniendo un enfoque en la entrega de valor al final del Sprint.
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <span>
+                        Revisión del Sprint (Sprint Review)
+                    </span>
+                    <ul class="items">
+                        <li>
+                            Al final del Sprint, se lleva a cabo una reunión de revisión para mostrar al Product Owner y a los interesados las funcionalidades completadas durante el Sprint.
+                        </li>
+                        <li>
+                            El equipo demuestra cómo funcionan las nuevas características y recopila comentarios para realizas ajustes antes de la siguiente iteración.
+                        </li>
+                        <li>
+                            Esta reunión ayuda a garantizar que el trabajo realizado sea coherente con las expectativas y permite a los interesados proporcionar retroalimentación temprana.
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <span>
+                        Retrospectiva del Sprint (Sprint Retrospective)
+                    </span>
+                    <ul class="items">
+                        <li>
+                            Después de la reunión de revisión, el equipo realiza una retrospectiva para evaluar el proceso y la colaboración durante el Sprint.
+                        </li>
+                        <li>
+                            Se analizan los aspectos positivos y los problemas que surgieron, y se identifican oportunidades de mejora para futuros Sprints.
+                        </li>
+                        <li>
+                            El objetivo es adaptar y ajustar continuamente el proceso para aumentar la eficiencia y la efectividad del equipo.
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+    </div>
 </body>
 </html>
