@@ -354,153 +354,669 @@
         </div>
 
         <div id="javascript">
-            <h2>
-                JavaScript
-            </h2>
-            <h3>
-                Ciclos o bucles (loops)
-            </h3>
-            <p>
-                También conocidos como bucles, son estructuras de control que nos van a permitir ejecutar un bloque de código de forma repetida hasta que se cumpla una condición específica. 
-            </p>
-            <p>
-                Es importante usar ciclos para automatizar tareas repetitivas. En JavaScript existen los siguientes ciclos:
-            </p>
-            <ul>
-                <li>
-                    <span>While</span>
-                </li>
-                <li>
-                    <span>Do While</span>
-                </li>
-                <li>
-                    <span>For</span>
-                </li>
-            </ul>
-            <p>
-                <span>Iterar.</span> Es el proceso de repetir una secuencia de instrucciones.
-            </p>
-            <p>
-                <span>Estructura de control.</span> Herramienta especial para crear algoritmos o programas más dinámicos y flexibles, nos ayuda a controlar la ejecución del código.
-            </p>
-            <h4>
-                While
-            </h4>
-            <p>
-                Ejecuta un bloque de codigo mientras se cumple una condición específica. Es una estructura de control que se utiliza para repetir un bloque de código mientras una condición sea verdadera.
-            </p>
-            <pre>
-                <span>while</span> (condición) {
-                    // Código que se ejecuta mientras la condición sea verdadera
-                }
-            </pre>
-            <p>Donde:</p>
-            <ol>
-                <li>
-                    <span>Condición.</span> Es una expresión booleana que se evalúa antes de cada iteración del bucle. Si la condición es verdadera, el bloque de código dentro del bucle se ejecutará; de lo contrario, el bucle se detendrá y la ejecución continuará con el código después del bucle "while".
-                </li>
-                <li>
-                    <span>Bloque de código.</span> Es el conjunto de instrucciones que se ejecuta mientras la condición sea verdadera.
-                </li>
-            </ol>
-            <h5>
-                Ejemplo. Consultorio dental
-            </h5>
-            <pre>
-                <span>let</span> capacidadPacientes = 10;
-                <span>let</span> pacientesEnConsultorio = 1;
+            <h2>JavaScript</h2>
 
-                //mientras 1 sea menor que 10...
-                <span>while</span> (pacientesEnConsultorio < capacidadPacientes){
-                    // seguiré dando servicio
-                    console.log("Seguimos dando servicio");
-                    // y aumento en uno en uno a mis pacientes
-                    pacientesEnConsultorio++;
-                }
-            </pre>
-            <h4>
-                Do While
-            </h4>
-            <p>
-                Se ejecuta la instrucción, mientras sea verdadero. (Primero ejecuta, después pregunta y si es verdadero, vuelve a ejecutar).
-            </p>
-            <p>
-                El bucle do while se diferencia del while ya que aquí se ejecuta la instrucción al menos una vez, y luego se pregunta para saber si se sigue ejecutando o no.
-            </p>
-            <pre>
-                <span>do</span> {
-                    // código a ejecutar
-                } <span>while</span> (condición);
-            </pre>
-            <h5>
-                Ejemplo. Consultorio dental
-            </h5>
-            <pre>
-                <span>var</span> contadorPacientes = 0;
+            <div id="variables">
+                <h3>Variables</h3>
+                <p>
+                    Es la forma para nombrar y almacenar un valor.
+                </p>
+                <ul>
+                    <li>
+                        <span>var</span> declara una variable, opcionalmente la inicia a un valor.
+                    </li>
+                    <li>
+                        <span>let</span> declara una variable local con ámbito de bloque, opcionalmente la inicia a un valor.
+                    </li>
+                    <li>
+                        <span>const</span> declara un nombre de constante de solo lectura y ámbito de bloque.
+                    </li>
+                </ul>
+                <h3>Elevación de variables (hoisting)</h3>
+                <p>
+                    Las variables en JavaScript son, en cierto sentido, "elevadas" (o "izadas") a la parte superior de la función o declaración. Sin embargo, las variables que se elevan devuelven un valor de undefined. Entonces, incluso si la declaras e inicias después de usarla o hacer referencia a esta variable, todavía devuelve undefined.
+                </p>
+                <h3>Tipos de datos</h3>
+                <ul>
+                    <li><strong>Primitivos</strong>
+                        <ul>
+                            <li>String</li>
+                            <li>Number</li>
+                            <li>Boolean</li>
+                            <li>Undefined</li>
+                            <li>Symbol</li>
+                            <li>Null</li>
+                        </ul>
+                    </li>
+                    <li><strong>No primitivos</strong>
+                        <ul>
+                            <li>Object</li>
+                        </ul>
+                    </li>
+                </ul>
+                <h4>Tipo String</h4>
+                <p>
+                    Es una cadena de texto, que siempre debe ir entre comillas simples o comillas dobles
+                </p>
+                <h4>Tipo Number</h4>
+                <p>
+                    Se refiere a un número con el cual podemos hacer operaciones
+                </p>
+                <h4>Tipo Boolean</h4>
+                <p>
+                    Representa una entidad lógica y puede tener dos valores: <span>true</span> y <span>false</span>.
+                </p>
+                <h4>Tipo undefined</h4>
+                <p>
+                    Es un tipo de dato que existe pero que no está definido o inicializado
+                </p>
+                <h4>Tipo Null</h4>
+                <p>
+                    Es un valor que no tenemos pero declaramos
+                </p>
+                <h4>Tipo Object</h4>
+                <p>
+                    Es usado para guardar una colección de datos definidos y entidades más complejas. 
+                </p>
 
-                <span>do</span> {
-                    <span>var</span> nombre = <span>prompt</span>("Ingrese el nombre del paciente");
-                    <span>if</span> (nombre && (contadorPacientes < 15)){
-                        console.log("Se ha registrado con éxito a " + nombre);
-                        contadorPacientes++
-                    } else {
-                        console.log("Límite excedido de pacientes por día");
-                        break;
+            </div> <!--Aquí termina mi div variables-->
+
+            <div id="operadores">
+                <h3>Operadores</h3>
+                <p>
+                    Un elemento que nos permite realizar una operación entre dos o más elementos.
+                </p>
+                <ul>
+                    <li>Operadores aritméticos (+, -, *, /) </li>
+                    <li>Operadores de asignación (= / asignación)</li>
+                    <li>Operadores de cadenas (toLowerCase, toUpperCase, trim, toString, concat)</li>
+                    <li>Operadores lógicos (&&, ||, !)</li>
+                    <li>Operadores de comparación (<, >, <=, >=, ==, === / igualdad, igualdad extrica)</li>
+                </ul>
+                <h4>Operadores aritméticos</h4>
+                <p>
+                    Son operadores que nos permiten tomar valores numéricos como sus operandos y retornar un valor numérico único, corresponde a operaciones matemáticas. 
+                </p>
+                <ul>
+                    <li>Suma (+)</li>
+                    <li>Resta (-)</li>
+                    <li>Multiplicación (*)</li>
+                    <li>División (/)</li>
+                    <li>Residuo/Módulo (%)</li>
+                    <li>Exponenciación (**)</li>
+                    <li>Incremento (++)</li>
+                    <li>Decremento (--)</li>
+                </ul>
+                <pre>
+                //Operaciones
+                //Suma (+): Se utiliza para sumar dos números
+                <span>let</span> resultado = 5 + 3; 
+                //resultado contendrá el valor 8
+                
+                //Resta (-): Se utiliza para restar un número de otro.
+                <span>let</span> resultado1 = 10 - 4; 
+                //resultado contendrá el valor 6
+                
+                //Multiplicación (*): Se utiliza para multiplicar dos números
+                <span>let</span> resultado2 = 6 * 3; 
+                //resultado contendrá el valor 18
+                
+                //División (/): Se utiliza para dividir un número por otro. La división por cero produce un valor especial llamado "Infinity" (infinito)
+                <span>let</span> resultado3 = 15 / 3; 
+                //resultado contendrá el valor 5
+                
+                //Módulo (%): Se utliza para obtener el resto de una división entre dos números
+                <span>let</span> resultado4 = 10 % 3; 
+                //resultado contendrá el valor 1 (el resto de 10 dividido por 3)
+                
+                //Incremento (++): Se utiliza para aumentar en 1 el valor de una variable
+                <span>let</span> numero = 5;
+                numero++;
+                //ahora numero contendrá el valor 6
+                
+                //Decremento (--): Se utiliza para disminuiir en 1 el valor de una variable
+                <span>let</span> numero1 = 8;
+                numero1--;
+                //ahora numero1 contendrá el valor 7
+                </pre>
+
+                <h4>Operadores de comparación</h4>
+                <p>
+                    Operadores que nos permiten comparar dos datos, y al hacerlo obtendremos un valor booleano (true a false)
+                </p>
+                <ul>
+                    <li>mayor que (>)</li>
+                    <li>menor que (<)</li>
+                    <li>mayor o igual que (>=)</li>
+                    <li>menor o igual que (<=)</li>
+                    <li>igual (==)</li>
+                    <li>estrictamente igual (===)</li>
+                    <li>no es igual (!=)</li>
+                    <li>no es estrictamente igual (!==)</li>
+                </ul>
+                <pre>
+                //Doble igual - igualdad abstracta
+                    5 == "5"; 
+                    //true, ya que JavaScriptt convierte la cadena "5" a un número antes de la comparación
+
+                //Triple igual - igualdad estricta
+                    5 === "5";
+                    //false, porque no son del mismo tipo y los tipos también difieren
+                </pre>
+
+                <h4>Operadores de asignación</h4>
+                <p>
+                    Son los operadores que utilizan para asignar un valor a una variable. Se usa el operador =
+                </p>
+                <pre>
+                    <span>let</span> edad = 31;
+                    <span>let</span> saldo = 0;
+                </pre>
+
+                <h4>Operadores lógicos</h4>
+                <p>
+                    Nos devuelve un resultado a partir de que se cumpla (o no) una condición, el resultado es booleano (true o false).
+                </p>
+                <h5>AND &&</h5>
+                <p>Sirve para determinar si dos expresiones son verdaderas. 
+                    <br>
+                    Si ambas son verdaderas, el resultado es verdadero. 
+                    <br>
+                    Si alguna de ellas es falsa, todo el resultado es falso. 
+                    <br>
+                    Si ambas son falsas, todo es falso.
+                </p>
+                <h5>OR ||</h5>
+                <p>
+                    Sirve para determinar si dos expresiciones son falsas, Si cualquiera de las dos afirmaciones es verdadera, todo es verdadero. Si las dos son falsas, todo es falso.
+                </p>
+                <h5>NOT (!)</h5>
+                <p>
+                    Regresa lo contrario de lo que evaluamos.
+                </p>
+
+            </div> <!--aquí termina div operadores-->
+
+            <div id="arreglos">
+                <h3>
+                    Arreglos (arrays)
+                </h3>
+                <p>
+                    Un array es un conjunto de datos que se puede almacenar en una sola variable. Un arreglo es una estructura de datos que podemos definir como una colección de variables (que pueden ser diferentes pero con un mismo contexto).
+                </p>
+                <pre>
+                    // Variables que están "sueltas"
+                    <span>let</span> nombre = "Kenia";
+                    <span>let</span> edad = 24;
+                    <span>let</span> puesto = "Participante";
+                </pre>
+                <pre>
+                    // Usamos un array (arreglo) para "juntar" nuestras variables
+                    // Agregamos los elementos al array separados por una coma
+                    <span>let</span> personasDeLaCH31 = [
+                    "Felipe",
+                    "José Ángel",
+                    "Marco",
+                    "Evelyn",
+                    "Alejandro"
+                    ];
+                    
+                    console.log(typeOf(personasDeLaCH31)); 
+                    // Se muestra en consola que es un arreglo
+                </pre>
+                <p>
+                    Al imprimir el tipo de dato de nuestro arreglo, obtenemos un objet porque los arrays son objetos.
+                </p>
+                <p>
+                    Los arrays, al ser objetos cuentan con métodos que nos permiten manipularlos.
+                </p>
+                <p>
+                    <span>Método Length.</span> Para mostrar los elementos de un array
+                </p>
+                <pre>
+                    console.log(personasDeLaCH31.<span>length</span>);
+                    // 5 elementos
+                </pre>
+                <p>
+                    <span>Declaración del índice de una variable.</span> Podemos acceder a un elemento específico utilizando los índices.
+                </p>
+                <pre>
+                    console.log(personasDeLaCH31[0]);
+                    // Imprime Felipe
+                    console.log(personasDeLaCH31[25]);
+                    // Imprime undefined porque es un elemento que aún no existe
+                </pre>
+                <p>
+                    Para hacer <span>modificaciones</span>, usamos el index para acceder al dato, y luego lo reasignamos. 
+                </p>
+                <pre>
+                    personasDeLaCH31[3] = "Kenia";
+                    console.log(personasDeLaCH31);
+                    // [["Felipe", "José Ángel", "Marco", "Kenia", "Alejandro"]]
+                </pre>
+                <h4>
+                    Métodos de arrays
+                </h4>
+                <pre>
+                    <span>let</span> listaDelSuper = [
+                    "Gansitos", 
+                    "Coca-colas", 
+                    "Arroz", 
+                    "Atún", 
+                    "Verduritas"
+                    ]
+                </pre>
+                <p>
+                    <span>Método length</span> para conocer la longitud del array.
+                </p>
+                <pre>
+                    console.log("La cantidad de elementos es de " + listaDelSuper.<span>length</span>);
+                </pre>
+                <p>
+                    <span>Método push()</span> para poner elementos al final de mi array.
+                </p>
+                <pre>
+                    listaDelSuper.<span>push</span>("Jabón para ropa", "Jabón para trastes");
+                    console.log(listaDelSuper);
+                    // [
+                    "Gansitos", 
+                    "Coca-colas", 
+                    "Arroz", 
+                    "Atún", 
+                    "Verduritas"
+                    "Jabón para ropa", 
+                    "Jabón para trastes"
+                    ]
+                </pre>
+                <p>
+                    <span>Método pop()</span> para eliminar elementos del final del array.
+                </p>
+                <pre>
+                    listaDelSuper.<span>pop()</span>;
+                    console.log(listaDelSuper);
+                    // [
+                    "Gansitos", 
+                    "Coca-colas", 
+                    "Arroz", 
+                    "Atún", 
+                    "Verduritas"
+                    "Jabón para ropa",
+                    ]
+                </pre>
+                <p>
+                    <span>Método unshift()</span> para agregar un elemento al principio del array.
+                </p>
+                <pre>
+                    listaDelSuper.<span>unshift</span>("Sabritones");
+                    console.log(listaDelSuper);
+                    // [
+                    "Sabritones"
+                    "Gansitos", 
+                    "Coca-colas", 
+                    "Arroz", 
+                    "Atún", 
+                    "Verduritas"
+                    "Jabón para ropa",
+                    ]
+                </pre>
+                <p>
+                    <span>Método shift()</span> para eliminar el primer elemento del array.
+                </p>
+                <pre>
+                    listaDelSuper.<span>shift()</span>;
+                    console.log(listaDelSuper);
+                    // [
+                    "Gansitos", 
+                    "Coca-colas", 
+                    "Arroz", 
+                    "Atún", 
+                    "Verduritas"
+                    "Jabón para ropa",
+                    ]
+                </pre>
+                <p>
+                    <span>Método indexOf</span> es para saber la posición de un elemento determinado, en este caso "Verduritas"
+                </p>
+                <pre>
+                    console.log(listaDelSuper.<span>indexOf</span>("Verduritas")); //4
+                </pre>
+                <p>
+                    <span>Método splice</span> para agregar, eliminar o reemplazar elementos.
+                </p>
+                <pre>
+                    //nombreArreglo.splice(inicio, cantidadElementosAEliminar,elementoInsertar1, elementoAInsertar2,...)
+
+                    listaDelSuper.<span>splice</span>(2,0,"Cacahuates", "Manzana");
+                    console.log(listaDelSuper);
+                    //[
+                    'Gansitos', 
+                    'Coca-colas', 
+                    'Cacahuates', 
+                    'Manzana', 
+                    'Arroz', 
+                    'Atún', 
+                    'Verduritas', 
+                    'Jabón para ropa']
+                </pre>
+                <p>
+                    <span>Método .map()</span> se utiliza para transformar los elementos de un array creando un nuevo array con los resultados de aplicar una función a cada elemento del array original.
+                </p>
+                <pre>
+                    <span>let</span> numeros = [1,2,3,4,5];
+
+                    //Crear otro arreglo con los números multiplicados x2 [2,4,6,8,10]
+
+                    <span>let</span> numerosPorDos = numeros.map(
+                        function(numero){
+                            return numero*2;
+                        }
+                    )
+
+                    console.log(numerosPorDos);
+                </pre>
+                <p>
+                    <span>Método .filter</span> se utiliza para filtrar elementos de un array basándose en una condición dada, y luego crea un nuevo array que contiene solo los elementos que cumplen con esa condición.
+                </p>
+                <pre>
+                    <span>const</span> numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+                    <span>const</span> numerosPares = numeros.<span>filter</span>(function(numero) {
+                        return numero % 2 === 0;
+                    });
+
+                    console.log(numerosPares); // Esto imprimirá: [2, 4, 6, 8, 10]
+                </pre>
+                <p>
+                    <span>Método sort()</span>  se utiliza para ordenar elementos de una lista o arreglo en un orden específico, ya sea alfabéticamente o numéricamente.
+                </p>
+                <pre>
+                    <span>const</span> numeros = [5, 2, 9, 1, 5];
+                    numeros.<span>sort</span>((a, b) => a - b); 
+                    // Ordena los números de menor a mayor.
+
+                    console.log(numeros); 
+                    // Esto imprimirá: [1, 2, 5, 5, 9]
+                </pre>
+                <p>
+                    <span>forEach()</span> permite recorrer todos los elementos de un arreglo y aplicar una función a cada uno de ellos. Es útil cuando deseas realizar una operación en cada elemento de un arreglo sin tener que escribir un bucle `for` tradicional.
+                </p>
+                <pre>
+                    <span>const</span> numeros = [1, 2, 3, 4, 5];
+                    numeros.<span>forEach</span>((numero) => {
+                            console.log(numero); 
+                        // Esto imprimirá cada número en el arreglo.
+                    });
+                </pre>
+            </div> <!--Aquí termina mi div arrays-->
+
+            <div id="ciclos">
+                <h3>
+                    Ciclos o bucles (loops)
+                </h3>
+                <p>
+                    También conocidos como bucles, son estructuras de control que nos van a permitir ejecutar un bloque de código de forma repetida hasta que se cumpla una condición específica. 
+                </p>
+                <p>
+                    Es importante usar ciclos para automatizar tareas repetitivas. En JavaScript existen los siguientes ciclos:
+                </p>
+                <ul>
+                    <li>
+                        <span>While</span>
+                    </li>
+                    <li>
+                        <span>Do While</span>
+                    </li>
+                    <li>
+                        <span>For</span>
+                    </li>
+                </ul>
+                <p>
+                    <span>Iterar.</span> Es el proceso de repetir una secuencia de instrucciones.
+                </p>
+                <p>
+                    <span>Estructura de control.</span> Herramienta especial para crear algoritmos o programas más dinámicos y flexibles, nos ayuda a controlar la ejecución del código.
+                </p>
+                <h4>
+                    While
+                </h4>
+                <p>
+                    Ejecuta un bloque de codigo mientras se cumple una condición específica. Es una estructura de control que se utiliza para repetir un bloque de código mientras una condición sea verdadera.
+                </p>
+                <pre>
+                    <span>while</span> (condición) {
+                        // Código que se ejecuta mientras la condición sea verdadera
                     }
-                } <span>while</span> (confirm("¿Desea registrar otro paciente?"));
+                </pre>
+                <p>Donde:</p>
+                <ol>
+                    <li>
+                        <span>Condición.</span> Es una expresión booleana que se evalúa antes de cada iteración del bucle. Si la condición es verdadera, el bloque de código dentro del bucle se ejecutará; de lo contrario, el bucle se detendrá y la ejecución continuará con el código después del bucle "while".
+                    </li>
+                    <li>
+                        <span>Bloque de código.</span> Es el conjunto de instrucciones que se ejecuta mientras la condición sea verdadera.
+                    </li>
+                </ol>
+                <h5>
+                    Ejemplo. Consultorio dental
+                </h5>
+                <pre>
+                    <span>let</span> capacidadPacientes = 10;
+                    <span>let</span> pacientesEnConsultorio = 1;
+    
+                    //mientras 1 sea menor que 10...
+                    <span>while</span> (pacientesEnConsultorio < capacidadPacientes){
+                        // seguiré dando servicio
+                        console.log("Seguimos dando servicio");
+                        // y aumento en uno en uno a mis pacientes
+                        pacientesEnConsultorio++;
+                    }
+                </pre>
+                <h4>
+                    Do While
+                </h4>
+                <p>
+                    Se ejecuta la instrucción, mientras sea verdadero. (Primero ejecuta, después pregunta y si es verdadero, vuelve a ejecutar).
+                </p>
+                <p>
+                    El bucle do while se diferencia del while ya que aquí se ejecuta la instrucción al menos una vez, y luego se pregunta para saber si se sigue ejecutando o no.
+                </p>
+                <pre>
+                    <span>do</span> {
+                        // código a ejecutar
+                    } <span>while</span> (condición);
+                </pre>
+                <h5>
+                    Ejemplo. Consultorio dental
+                </h5>
+                <pre>
+                    <span>var</span> contadorPacientes = 0;
+    
+                    <span>do</span> {
+                        <span>var</span> nombre = <span>prompt</span>("Ingrese el nombre del paciente");
+                        <span>if</span> (nombre && (contadorPacientes < 15)){
+                            console.log("Se ha registrado con éxito a " + nombre);
+                            contadorPacientes++
+                        } else {
+                            console.log("Límite excedido de pacientes por día");
+                            break;
+                        }
+                    } <span>while</span> (confirm("¿Desea registrar otro paciente?"));
+    
+                    console.log("Número total de pacientes: ", contadorPacientes);
+                </pre>
+    
+                <h4>
+                    For
+                </h4>
+                <p>
+                    Se utiliza cuando conocemos el número exacto de iteraciones que vamos a realizar. Consiste en 3 partes fundamentales:
+                </p>
+                <ul>
+                    <li>
+                        <span>Inicialización.</span> Se ejecuta antes de que el bucle comience y se usa para establecer una variable de control (variable de inicio).
+                    </li>
+                    <li>
+                        <span>Condición.</span> Es el detonante que verificamos antes de cada iteración, para saber si se sigue ejecutando o no (siempre y cuando sea verdadera).
+                    </li>
+                    <li>
+                        <span>Expresión de iteración (contador).</span> Tiene la finalidad de modificar la variable de inicio y poder tener un punto de cierre.
+                    </li>
+                </ul>
+                <pre>
+                    <span>for</span> (inicialización; condición; expresión de iteración) {
+                        // bloque de código a ejecutar
+                    }
+                </pre>
+                <h5>
+                    Ejemplo. Crea un código que imprima los números del 0 al 4
+                </h5>
+                <pre>
+                    <span>for</span> (<span>var</span> valorInicial = 0; valorInicial < 5; valorInicial++){
+                        console.log(valorInicial);
+                    }
+                </pre>
+                <h5>
+                    Versión más "comercial"
+                </h5>
+                <pre>
+                    <span>for</span>(<span>var</span> i = 0; i < 5; i++) {
+                        console.log(i);
+                    }
+                </pre>
+                <h5>
+                    Ejemplo. Consultorio Dental: registro de citas
+                </h5>
+                <pre>
+                    <span>let</span> cantidadDeCitasDiarias = 5;
+    
+                    <span>for</span> (<span>let</span> i = 1; i <= cantidadDeCitasDiarias; i++){
+                        <span>var</span> nombre = prompt("Ingrese el nombre del paciente " + i);
+                        console.log("Paciente " + nombre + " con cita " + i);
+                    }
+                </pre>
+            </div> <!--Aquí termina mi div de ciclos-->
 
-                console.log("Número total de pacientes: ", contadorPacientes);
-            </pre>
+            <div id="promesas">
+                <h3>Promesas</h3>
+                <p>
+                    Son objetos que representan un valor al momento de conectar con el servidor. Como su nombre lo indica, una promesa es algo que no sabemos si se va a cumplir o no, pero al menos necesitamos saber que hacemos si se cumple o si no se cumple. La ventaja que tienen las promesas es que no se anidan, en una sola función podemos manejar ambas situaciones. 
+                </p>
+                <p>
+                    Las promesas tienen 3 estados posibles:
+                </p>
+                <ul>
+                    <li>
+                        <span>pending: </span>estado inicial, cuando se crea la promesa. Aquí aún no hay resultados. 
+                    </li>
+                    <li>
+                        <span>fullfiled: </span>cuando la promesa se resuelve con éxito (resolve)
+                    </li>
+                    <li>
+                        <span>rejected: </span>cuando la operación asíncrona falla (reject)
+                    </li>
+                </ul>
+                <pre>
+                    <span>const</span> miPromesa = new Promise((resolve, reject) => {
+                        
+                        // Hacer alguna tarea asincrónica
+                            if (tareaCompletada) {
+                                resolve("Tarea completada.");
+                        } else {
+                            reject("Tarea fallida.");
+                        }
+                        });
 
-            <h4>
-                For
-            </h4>
-            <p>
-                Se utiliza cuando conocemos el número exacto de iteraciones que vamos a realizar. Consiste en 3 partes fundamentales:
-            </p>
-            <ul>
-                <li>
-                    <span>Inicialización.</span> Se ejecuta antes de que el bucle comience y se usa para establecer una variable de control (variable de inicio).
-                </li>
-                <li>
-                    <span>Condición.</span> Es el detonante que verificamos antes de cada iteración, para saber si se sigue ejecutando o no (siempre y cuando sea verdadera).
-                </li>
-                <li>
-                    <span>Expresión de iteración (contador).</span> Tiene la finalidad de modificar la variable de inicio y poder tener un punto de cierre.
-                </li>
-            </ul>
-            <pre>
-                <span>for</span> (inicialización; condición; expresión de iteración) {
-                    // bloque de código a ejecutar
-                }
-            </pre>
-            <h5>
-                Ejemplo. Crea un código que imprima los números del 0 al 4
-            </h5>
-            <pre>
-                <span>for</span> (<span>var</span> valorInicial = 0; valorInicial < 5; valorInicial++){
-                    console.log(valorInicial);
-                }
-            </pre>
-            <h5>
-                Versión más "comercial"
-            </h5>
-            <pre>
-                <span>for</span>(<span>var</span> i = 0; i < 5; i++) {
-                    console.log(i);
-                }
-            </pre>
-            <h5>
-                Ejemplo. Consultorio Dental: registro de citas
-            </h5>
-            <pre>
-                <span>let</span> cantidadDeCitasDiarias = 5;
+                        miPromesa
+                            .then((resultado) => {
+                                console.log(resultado);
+                            })
+                            .catch((error) => {
+                                console.error(error);
+                            });
+                </pre>
+            </div> <!--cierre de div promesas-->
 
-                <span>for</span> (<span>let</span> i = 1; i <= cantidadDeCitasDiarias; i++){
-                    <span>var</span> nombre = prompt("Ingrese el nombre del paciente " + i);
-                    console.log("Paciente " + nombre + " con cita " + i);
-                }
-            </pre>
+            <div id="objetos-json">
+                <h4>Objetos JSON</h4>
+                <p>
+                    Los objetos JSON (JavaScript Object Notation)son una forma común de representar datos estructurados en JavaScript. <span>JSON</span> es un formato de intercambio de datos que se utiliza ampliamente para transmitir datos entre un servidor y un cliente web, así como para almacenar configuraciones y datos estructurados en archivos. 
+                </p>
+                <p>
+                    Se puede trabajar fácilmente con objetos JSON utilizando el <span>método JSON.parse()</span> para convertir una cadena JSON en un objeto JavaScript y <span>JSON.stringify()</span> para convertir un objeto JavaScript en una cadena JSON.
+                </p>
+                <h5>
+                    Producto como respuesta de un servidor en formato plano (texto)
+                </h5>
+                <pre>
+                let productoServidor = {
+                    "id":17,
+                    "title":"Rain Jacket Women Windbreaker Striped Climbing Raincoats",
+                    "price":39.99,
+                    "description":"Lightweight perfet for trip or casual wear---Long sleeve with hooded, adjustable drawstring waist design. 
+                    Button and zipper front closure raincoat, fully stripes Lined and The Raincoat has 2 side pockets are a good size 
+                    to hold all kinds of things, it covers the hips, and the hood is generous but doesn't overdo it.
+                    Attached Cotton Lined Hood with Adjustable Drawstrings give it a real styled look.",
+                    "category":"women's clothing",
+                    "image":"https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg","rating":{"rate":3.8,"count":679}}
+                </pre>
+                <h5>
+                    Producto como objeto JSON
+                </h5>
+                <pre>
+                    let productoJSON = {
+                        <span>id</span>:17,
+                        <span>title</span>:"Rain Jacket Women Windbreaker Striped Climbing Raincoats",
+                        <span>price</span>:39.99,
+                        <span>description</span>:"Lightweight perfet for trip or casual wear---Long sleeve with hooded, adjustable drawstring waist design. 
+                        Button and zipper front closure raincoat, fully stripes Lined and The Raincoat has 2 side pockets are a good size 
+                        to hold all kinds of things, it covers the hips, and the hood is generous but doesn't overdo it.
+                        Attached Cotton Lined Hood with Adjustable Drawstrings give it a real styled look.",
+                        <span>category</span>:"women's clothing",
+                        <span>image</span>:"https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg",
+                        rating:{
+                            rate:3.8,
+                            count:679
+                        }}
+                </pre>
+                <h5>Revisar información de un objeto con texto plano/objeto tipo JSON</h5>
+                <pre>
+                    console.log(productoServidor.<span>price</span>);
+                    console.log(productoJSON.<span>price</span>);
+                </pre>
+                <h5>
+                    Objeto JSON que voy a mandar a un servidor
+                </h5>
+                <pre>
+                    <span>let</span> paciente = {
+                        nombre: "Felipe",
+                        edad: 31,
+                        estatus: "Registrado"
+                    }
+                    
+                    console.log(paciente);
+                </pre>
+                <h5>
+                    Necesito convertirlo a una cadena de texto para que el servidor lo lea
+                </h5>
+                <pre>
+                    <span>let</span> pacienteStringifeado = JSON.stringify(paciente);
+
+                    console.log(pacienteStringifeado);
+                </pre>
+                <h5>
+                    Si recibo un string del servidor, lo parseo
+                </h5>
+                <pre>
+                    <span>let</span> pacienteServidor = '{
+                        "nombre":"Felipe",
+                        "edad":31,
+                        "estatus":"Registrado"}';
+
+                    <span>let</span> pacienteJSON = JSON.parse(pacienteServidor);
+                    console.log(pacienteJSON);
+                </pre>
+
+            </div> <!--cierre div objetos json-->
 
         </div>
 
