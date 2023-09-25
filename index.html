@@ -40,7 +40,7 @@
     </nav>
 
     <!--main-->
-    <div class="contenedor-principal">
+    <div class="contenedor-principal" id="contenedor-principal">
 
         <div class="imagen-contenedor-principal">
             <img src="./assets/img/main img.png" alt="Imagen de mujer desarrolladora">
@@ -356,6 +356,10 @@
         <div id="javascript">
             <h2>JavaScript</h2>
 
+            <button>
+                <a href="#contenedor-principal">Inicio</a>
+            </button>
+            
             <div id="variables">
                 <h3>Variables</h3>
                 <p>
@@ -536,6 +540,134 @@
                 </p>
 
             </div> <!--aquí termina div operadores-->
+
+            <div id="funciones">
+                <h3>Funciones</h3>
+                <p>
+                    Una función es un bloque de código que realiza una tarea específica, que realiza cuando se le llama.
+                </p>
+                <pre>
+                    <span>function</span> saludar() {
+                        console.log("Hola soy una función");
+                    }
+                    
+                    saludar();
+                </pre>
+                <p>
+                    Las funciones son simplemente objetos especiales con la capacidad adicional de ser invocados (llamados como funciones). Esto significa que puedes asignar funciones a variables, pasarlas como argumentos a otras funciones y devolver funciones desde otras funciones. Esto facilita la creación de funciones de orden superior, como funciones de devolución de llamada y funciones que generan otras funciones.
+                </p>
+                <h4>Tipos de funciones principales</h4>
+                <ul>
+                    <li>Tradicionales "normales"</li>
+                    <li>Flecha</li>
+                    <li>Anónimas</li>
+                </ul>
+                <h4>
+                    Declarar funciones
+                </h4>
+                <ol>
+                    <li>La palabra reservada <span>function</span>, nos indica que estamos definiendo una función.</li>
+                    <li>El nombre de la función, depende de la acción a realizar.</li>
+                    <li>Y un par de paréntesis () después del nombre, puede contener parámetros pero en este caso no tenemos ninguno.</li>
+                    <li>Seguido de un juego de llaves para cerrar el bloque de código.</li>
+                    <li>Dependiendo de las instrucciones dentro del cuerpo de la función y del propósito de la misma, se determina si la función retorna un valor.</li>
+                </ol>
+                <h5>
+                    Llamamos una función y le vamos a almacenar un resultado
+                </h5>
+                <pre>
+                    <span>function</span> suma (a,b) {
+                        return a + b;
+                    }
+                    
+                    <span>var</span> resultado = suma(5,3); 
+                    //Almacenar función en una variable
+                    console.log(resultado);
+                    /* La función suma toma dos argumentos (a y b) 
+                    y devuelve la suma de estos dos valores. 
+                    Luego, llamamos a la función 
+                    y almacenamos el resultado en la variable resultado. */
+                </pre>
+                <h5>
+                    Función que muestra un mensaje en la consola
+                </h5>
+                <pre>
+                    <span>function</span> saludo (nombre){
+                        console.log("Hola, " + nombre + "!");
+                    }
+                    //Llamamos a la función saludo a alguien
+                    
+                    saludo("Kenia"); // Imprime el resultado
+                </pre>
+                <h4>Scope</h4>
+                <p>
+                    Alcance: hace referencia al alcance de una variable en nuestro código de JS.
+                </p>
+                <h5>Global</h5>
+                <p>
+                    Quiere decir que se puede utilizar o trabajar con una variable dentro de cualquier parte del código.
+                </p>
+                <ul>
+                    <li>
+                        <span>var</span>: no recomendable, por el comportamiento de la variable y la poca adaptabilidad.
+                    </li>
+                    <li>
+                        <span>let</span>: es preferible e incluso más segura de utilizar porque además de funcionar de manera global, también puede ser utilizada de manera local.
+                    </li>
+                    <li>
+                        <span>const</span>: se refiere, por su nombre tan intuitivo, a la palabra constante, esto quiere decir que su valor no puede ser reasignado. 
+                    </li>
+                </ul>
+                <h5>Variable local</h5>
+                <pre>
+                    <span>function</span> funcionConVariableLocal(){
+                        var mensaje = "Este es una variable local";
+                        console.log(mensaje);
+                    }
+                </pre>
+                <h5>Variable global</h5>
+                <pre>
+                    <span>var</span> mensajeGlobal = "Esta es una variable global";
+
+                    <span>function</span> funcionConVariableGlobal () {
+                        console.log (mensajeGlobal);
+                    }
+
+                    funcionConVariableGlobal();
+                </pre>
+                <h4>
+                    Funciones anónimas
+                </h4>
+                <p>
+                    Estas funciones pueden ser declaradas sin un nombre y luego asignadas a variables o pasarse como parámetros en otras funciones. La diferencia principal de estas funciones es que se declaran sin un nombre.
+                </p>
+                <pre>
+                    <span>const</span> saludos = <span>function</span> () {
+                        console.log("Hola, esta es una función anónima");
+                    }
+                    
+                    saludos(); 
+                </pre>
+                <h4>
+                    Funciones flecha
+                </h4>
+                <p>
+                    Una forma más concisa de definir funciones anónimas. Se le llama flecha debido a su sintaxis que utiliza (=>)
+                    <br>
+                    Básicamente, se trata de reemplazar la palabra function y añadir => antes de abrir nuestras llaves.
+                </p>
+                <pre>
+                    <span>const</span> resta = (a,b) => a-b;
+                    
+                    /*Esta función flecha es una forma más corta de:
+                    <span>const</span> resta = function (a,b) {
+                            return a -b
+                        }
+                    */
+                    console.log(resta(5,3));
+                </pre>
+
+            </div> <!--aquí cierra div funciones-->
 
             <div id="arreglos">
                 <h3>
