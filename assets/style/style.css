@@ -134,3 +134,19 @@ span {
     list-style:circle;
     margin-top: 5px;
 }
+
+pre {
+    background-color: rgb(37, 35, 35);
+    color: white;
+    border-radius: 10px;
+    padding-top: 20px;
+    margin-bottom: 10px;
+}
+
+pre span {
+    color: #40F8FF;
+}
+
+h5 {
+    margin: 10px 0;
+}
