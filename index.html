@@ -76,6 +76,9 @@
                 <li>
                     <a href="#javascript">JavaScript</a>
                 </li>
+                <li>
+                    <a href="#java">Java</a>
+                </li>
             </ul>
         </div>
     </div>
@@ -1149,6 +1152,229 @@
                 </pre>
 
             </div> <!--cierre div objetos json-->
+
+        </div>
+
+        <div id="java">
+            <h2>Java</h2>
+            <h3>¿Qué es Java?</h3>
+            <p>Java es un <span>lenguaje de programación basado en clases y orientado a objetos</span>, diseñado para obtener la menor cantidad posible de dependencias de implementación.</p>
+            <p>Las aplicaciones Java se ejecutan en una <span>Máquina Virtual Java</span> que permite la portabilidad a diferentes plataformas.</p>
+
+            <h3>Write Once, Run Anywhere (WORA)</h3>
+            <p>La principal diferencia entre lenguajes de alto nivel y bajo nivel, radica en el nivel de abstracción y control que ofrecen. Los <span>lenguajes de alto nivel</span> están diseñados para ser más accesibles y portátiles, mientras que los <span>lenguajes de bajo nivel</span> ofrecen un mayor control y eficiencia, pero a menudo a costa de una mayor complejidad y falta de portabilidad. La elección entre un tipo de lenguaje u otro depende de los requisitos y las necesidades específicas de desarrollo de un proyecto.</p>
+
+            <h3>
+                ¿Qué podemos hacer con Java?
+            </h3>
+            <ul>
+                <li>Web (Backend)</li>
+                <li>Ciencia de Datos</li>
+                <li>Base de Datos y Almacenamiento de Datos</li>
+                <li>Aplicaciones para Escritorio</li>
+                <li>Videojuegos</li>
+                <li>Aplicaciones Móvil</li>
+                <li>Machine Learning</li>
+            </ul>
+            <h3>¿Por qué aprender Java?</h3>
+            <ul>
+                <li>Es uno de los <span>lenguajes de programación más populares.</span></li>
+                <li>Es un lenguaje de programación <span>demandado</span> por empleadores, y por tanto, <span>bien remunerado.</span></li>
+                <li><span>JAVA está en todas partes.</span></li>
+                <li>Es <span>utilizado en aplicaciones del mundo real.</span></li>
+                <li>Cuenta con un <span>conjunto de herramientas sólidas</span> que ayudan a la productividad.</li>
+            </ul>
+            <h3>JVM (Java Virtual Machine)</h3>
+            <p>Máquina Virtual de Java. La JVM es un componente fundamental en la plataforma Java. Es una máquina virtual que permite ejecutar programas escritos en el lenguaje de programación Java. La principal característica de la JVM es su capacidad para ejecutar código Java de manera independiente de la plataforma, lo que significa que el mismo programa Java puede ejecutarse en diferentes sistemas operativos sin necesidad de modificaciones.</p>
+            <p>La JVM actúa como un intermediario entre el código fuente Java y el hardware de la computadora. Cuando se compila un programa Java, se traduce a un formato intermedio llamado "bytecode", que es independiente de la plataforma. Luego, la JVM se encarga de interpretar y ejecutar este bytecode en la plataforma específica en la que se encuentra.</p>
+            <p>La JVM también realiza tareas importantes como la gestión de memoria (recogida de basura), la adminstración de hilos y la seguridad, lo que hace que las aplicaciones Java sean seguras y confiables.</p>
+            
+            <h3>JDK (Java Development Kit)</h3>
+            <p>Kit de Desarrollo de Java. El JDK es un conjunto de herramientas de desarrollo que incluye todo lo necesario para desarrollar aplicaciones Java. Esto incluye el compilador Java (javac) para traducir el código fuente Java a bytecode, bibliotecas estándar de Java (Java API) para acceso a funcionalidades comunes, y otras utilidades como depuradores y generadores de documentación.</p>
+            <p>El JDK es esencial para los desarrolladores de Java, ya que les permite escribir, compilar y depurar sus aplicaciones. Además, el JDK incluye la JRE (Java Runtime Environment) para que los desarrolladores puedan probar sus aplicaciones antes de distribuirlas.</p>
+
+            <h3>JRE (Java Runtime Environment)</h3>
+            <p>Entorno de Ejecución de Java. El JRE es un entorno de ejecución que permite ejecutar aplicaciones Java ya compiladas en una computadora. Contiene la JVM, bibliotecas y otros archivos necesarios para la ejecución de aplicaciones Java, pero no incluye herramientas de desarrollo como el compilador (javac) ni las bibliotecas de desarrollo del JDK. Los usuarios finales que desean ejecutar aplicaciones Java en sus computadoras deben tener instalado el JRE correspondiente. Esto les permite abrir y ejecutar aplicaciones Java sin preocuparse por la compilación o el desarrollo. Por otro lado, los desarrolladores que crean aplicaciones Java necesitan el JDK para escribir y compilar el código, pero pueden utilizar el JRE para probar sus aplicaciones en un entorno similar al de los usuarios finales.</p>
+            <br>
+            <p>En <span>resumen</span>, la JVM es la máquina virtual que ejecuta código Java, el JDK es el kit de desarrollo que incluye herramientas para escribir y compilar código Java, y el JRE es el entorno de ejecución que permite a los usuarios ejecutar aplicaciones Java en sus computadoras. Estos componentes trabajan juntos para hacer que Java sea un lenguaje de programación versátil y portátil.</p>
+
+            <div>
+                <h3>Variables, tipos de datos y operadores</h3>
+                <h4>Variables en Java</h4>
+                <ul>
+                    <li>Lenguaje de programación <span>estático.</span></li>
+                    <li>Lenguaje de programación de <span>tipado fuerte.</span></li>
+                </ul>
+
+                <pre>
+                    <span>String</span> name = "Mariana";
+                    int age = 28;
+                    double salary = 52500.20;
+                    boolean lead;
+                    lead = true;
+                </pre>
+
+                <h3>Tipos de datos</h3>
+                <ol>
+                    <li>Datos primitivos</li>
+                    <ul>
+                        <li>byte</li>
+                        <li>short</li>
+                        <li>int</li>
+                        <li>long</li>
+                        <li>char</li>
+                        <li>float</li>
+                        <li>double</li>
+                        <li>boolean</li>
+                    </ul>
+                    <li>Datis estructurados</li>
+                    <ul>
+                        <li>String</li>
+                        <li>Array</li>
+                        <li>Creados por el usuario</li>
+                    </ul>
+                </ol>
+
+                <h3>Datos primitivos</h3>
+                <ul>
+                    <li><span>Enteros: byte, short, int y long. </span>Permiten trabajar con números enteros ya sean positivos o negativos.</li>
+                    <li><span>Flotantes/Decimales: float y double. </span>Permiten trabajar con números los cuáles posean punto decimal ya sean positivos o negativos. </li>
+                    <li><span>Caracteres: char. </span>Este tipo de datos nos permitirá trabajar con caracteres (ASCII).</li>
+                    <li><span>Booleanos. </span>Permite trabajar con valores lógicos: verdadero o falso.</li>
+                </ul>
+
+                <h3>Datos primitivos: Enteros</h3>
+                <table>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>bytes</th>
+                        <th>Valor mínimo</th>
+                        <th>Valor máximo</th>
+                    </tr>
+                    <tr>
+                        <td>byte</td>
+                        <td>1</td>
+                        <td>-128</td>
+                        <td>127</td>
+                    </tr>
+                    <tr>
+                        <td>short</td>
+                        <td>2</td>
+                        <td>-32768</td>
+                        <td>32,767</td>
+                    </tr>
+                    <tr>
+                        <td>int</td>
+                        <td>4</td>
+                        <td>-2147483648</td>
+                        <td>2147483647</td>
+                    </tr>
+                    <tr>
+                        <td>long</td>
+                        <td>8</td>
+                        <td>-9223372036854775808</td>
+                        <td>9223372036854775807</td>
+                    </tr>
+                </table>
+
+                <h3>Datos primitivos: Flotantes/Decimales</h3>
+                <table>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>bytes</th>
+                        <th>Valor mínimo</th>
+                        <th>Valor máximo</th>
+                    </tr>
+                    <tr>
+                        <td>float (f)</td>
+                        <td>4</td>
+                        <td>1.4 e-45</td>
+                        <td>3.4 e+38</td>
+                    </tr>
+                    <tr>
+                        <td>double</td>
+                        <td>8</td>
+                        <td>4.9 e-324</td>
+                        <td>1.8 e+308</td>
+                    </tr>
+                </table>
+                
+            </div>
+
+            <h3>Tipos de notación</h3>
+            <ul>
+                <li>camelCase</li>
+                <li>PascalCase</li>
+                <li>snake_case</li>
+                <li>kebab-case</li>
+            </ul>
+
+            <h3>Casteo</h3>
+            <ul>
+                <li>Convertir directamente un tipo de datos a otro tipo se conoce como <span>casting.</span></li>
+                <li>La conversión de tipos sucede cuando se asigna un valor de un tipo de datos primitivo a otro tipo.</li>
+            </ul>
+
+            <div>
+                <h3>Control de flujo en Java</h3>
+                <h4>Estructura de control</h4>
+                <ul>
+                    <li><span>Estructura secuencial</span></li>
+                    <li><span>Estructura condicional</span></li>
+                    <ul>
+                        <li>if simple</li>
+                        <li>if - else</li>
+                        <li>if anidados</li>
+                        <li>switch</li>
+                        <li>Operador condicional ? :</li>
+                    </ul>
+                    <li><span>Estructura repetitiva</span></li>
+                    <ul>
+                        <li>while</li>
+                        <li>do - while</li>
+                        <li>for</li>
+                    </ul>
+                    <li><span>Instrucciones de salto</span></li>
+                    <ul>
+                        <li>break</li>
+                        <li>continue</li>
+                    </ul>
+                </ul>
+                <p>En Java, la estructura de control <span>switch</span> no acepta datos de tipo "float" o "double". Solo permite valores enteros "int", "byte", "char" y "short".</p>
+                <p>La razón principal es que las operaciones de punto flotante pueden generar resultados que no son exactos debido a la representación binaria interna de estos números.</p>
+
+                <h3>Conceptos básicos</h3>
+                <ul>
+                    <li>Los ciclos también son conocidos como bucles (loops).</li>
+                    <li>Son estructuras de control, también llamadas estructuras repetitivas (hay estructuras repetitivas y secuenciales).</li>
+                    <li>Es importante identificar cuándo deseamos terminar nuestros ciclos.</li>
+                    <li>Los ciclos evalúan la condición y cuando se deje de cumplir, ya no ejecutarán más el código.</li>
+                    <li>Hay que evitar los ciclos infinitos.</li>
+                </ul>
+
+                <h4>Ciclo For</h4>
+                <pre>
+                    <span>for</span> (inicialización; condición; incremento){
+                        //instrucciones
+                    }
+                </pre>
+
+                <h4>Ciclo While</h4>
+                <pre>
+                    <span>while</span> (condición a evaluar){
+                        //instrucciones
+                    }
+                </pre>
+
+                <h4>Ciclo Do-While</h4>
+                <pre>
+                    <span>do</span> {
+                        //instrucciones
+                    } <span>while</span> (condición)
+                </pre>
+
+            </div>
+
 
         </div>
 
