@@ -1184,6 +1184,15 @@
                 <li>Es <span>utilizado en aplicaciones del mundo real.</span></li>
                 <li>Cuenta con un <span>conjunto de herramientas sólidas</span> que ayudan a la productividad.</li>
             </ul>
+
+            <h3>Versiones</h3>
+            <ul>
+                <li><span>SE = Standard Edition</span>. Aplicaciones de escritorio, muchas cosas que tienen que ver con la consola.</li>
+                <li><span>EE = Enterprise Edition</span>. Para empresas, se utiliza para construir aplicativos de última tecnología.</li>
+            </ul>
+
+            <p>Un <span>"IDE"</span> es un acrónimo que significa <span>"Entorno de Desarrollo Integrado"</span> en inglés, o <span>"Integrated Development Environment".</span> Es una herramienta de software que proporciona un conjunto completo de características y herramientas para el desarrollo de software en un solo entorno integrado. Los IDE son ampliamente utilizados por programadores y desarrolladores de software para simplificar y agilizar el proceso de escritura, prueba y depuración de código.</p>
+
             <h3>JVM (Java Virtual Machine)</h3>
             <p>Máquina Virtual de Java. La JVM es un componente fundamental en la plataforma Java. Es una máquina virtual que permite ejecutar programas escritos en el lenguaje de programación Java. La principal característica de la JVM es su capacidad para ejecutar código Java de manera independiente de la plataforma, lo que significa que el mismo programa Java puede ejecutarse en diferentes sistemas operativos sin necesidad de modificaciones.</p>
             <p>La JVM actúa como un intermediario entre el código fuente Java y el hardware de la computadora. Cuando se compila un programa Java, se traduce a un formato intermedio llamado "bytecode", que es independiente de la plataforma. Luego, la JVM se encarga de interpretar y ejecutar este bytecode en la plataforma específica en la que se encuentra.</p>
@@ -1197,6 +1206,20 @@
             <p>Entorno de Ejecución de Java. El JRE es un entorno de ejecución que permite ejecutar aplicaciones Java ya compiladas en una computadora. Contiene la JVM, bibliotecas y otros archivos necesarios para la ejecución de aplicaciones Java, pero no incluye herramientas de desarrollo como el compilador (javac) ni las bibliotecas de desarrollo del JDK. Los usuarios finales que desean ejecutar aplicaciones Java en sus computadoras deben tener instalado el JRE correspondiente. Esto les permite abrir y ejecutar aplicaciones Java sin preocuparse por la compilación o el desarrollo. Por otro lado, los desarrolladores que crean aplicaciones Java necesitan el JDK para escribir y compilar el código, pero pueden utilizar el JRE para probar sus aplicaciones en un entorno similar al de los usuarios finales.</p>
             <br>
             <p>En <span>resumen</span>, la JVM es la máquina virtual que ejecuta código Java, el JDK es el kit de desarrollo que incluye herramientas para escribir y compilar código Java, y el JRE es el entorno de ejecución que permite a los usuarios ejecutar aplicaciones Java en sus computadoras. Estos componentes trabajan juntos para hacer que Java sea un lenguaje de programación versátil y portátil.</p>
+
+            <h3>Estructura básica de un programa JAVA</h3>
+            <ul>
+                <li><span>Todos</span> los programas de Java, son una clase</li>
+                <li>Al hablar de clases, puedo tener objetos</li>
+                <li>Para poder ejecutar mi clase, necesito un método main (predefinido)</li>
+                <li>El nombre de la clase tiene que ser idéntico al nombre de mi archivo</li>
+                <li>Es similar a JS, solo que con otro lenguaje (sintaxis)
+                    <pre>
+                        console.log = system.out.print
+                    </pre>
+                </li>
+                <li>En ocasiones, será necesario importar bibliotecas o funcionalidades</li>
+            </ul>
 
             <div>
                 <h3>Variables, tipos de datos y operadores</h3>
@@ -1419,6 +1442,11 @@
                 <li><span>Abstracción</span></li>
             </ul>
 
+            <h3>Sobrecarga de métodos (Overloading)</h3>
+            <p>La sobrecarga de método (constructor) es el poder utilizar el mismo nombre de nuestro método, con diferentes parámetros.</p>
+            <p><span>Sobrecarga:</span> Mismo nombre de método, diferentes parámetros.</p>
+            <p><span>Sobreescritura:</span> Mismo método, con instrucciones diferentes.</p>
+
             <h4>Encapsulación</h4>
             <p>Se refiere a la práctica de ocultar los detalles internos de un objeto y restringir el acceso directo a sus atributos y métodos. Esto se logra utilizando modificadores de acceso para controlar quién puede acceder y modificar los atributos de una clase. La encapsulación también involucra el uso de métodos de acceso (getters y setters) para interactuar con los atributos privados.</p>
             <ul>
@@ -1430,8 +1458,25 @@
             <h4>Herencia</h4>
             <p>Es un concepto que permite que una clase (llamada subclase o clase derivada) herede las propiedades y comportamientos de otra clase (llamada superclase o clase base). En Java, se implementa utilizando la palabra clave <span>"extends"</span>. La herencia facilita la reutilización del código y la creación de jerarquías de clases.</p>
 
+            <p>Herencia = clases
+                <br>
+                Implementar = Interfaces
+            </p>
+
+            <h4>Herencia</h4>
+            <ul>
+                <li>Establecer relaciones entre clases (padres e hijos)</li>
+                <li>Heredar cosas de mis padres (constructores, métodos, atributos)</li>
+                <li>Se utiliza la palabra <span>extends</span></li>
+                <li></li>
+            </ul>
+
+            <h4>Implementación</h4>
+
             <h4>Polimorfismo</h4>
             <p>Permite que objetos de diferentes clases respondan de manera diferente a la misma llamada de método. Esto se logra mediante la sobrecarga de métodos y la implementación de métodos en clases derivadas (subclases) que tienen el mismo nombre y firma que los métodos en la clase base. El polimorfismo en Java se usa principalmente a través de interfaces y clases abstractas, así como con el uso de la herencia y la implementación de interfaces.</p>
+
+            <p><span>Polimorfismo</span> como la capacidad de cambiar el comportamiento (instrucción) de un método definido.</p>
 
             <h4>Abstracción</h4>
             <p>Es el proceso de simplificar objetos complejos al modelar clases basadas en sus características más esenciales. En Java, esto se logra mediante la creación de clases abstractas e interfaces que definen métodos sin proporcionar una implementación concreta. Las clases que heredan de clases abstractas o implementan interfaces deben proporcionar una implementación concreta de esos métodos. La abstracción permite crear modelos más generales y abstractos de objetos en el mundo real.</p>
